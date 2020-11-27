@@ -1,20 +1,14 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import LoginScreen from '_scenes/login';
+import LoginScene from '_scenes/LoginScene';
 
 const AuthStack = createStackNavigator();
 
 const AuthNavigator = () => {
     return (
         <AuthStack.Navigator initialRouteName="Login" headerMode="none">
-            <AuthStack.Screen
-                name="Login"
-                component={LoginScreen}
-                options={{
-                    headerTitle: 'Login',
-                }}
-            />
+            <AuthStack.Screen name="Login" component={LoginScene} />
         </AuthStack.Navigator>
     );
 };

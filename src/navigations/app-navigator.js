@@ -1,10 +1,9 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, Text } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { Colors } from '_styles';
-import HomeNavigator from '_navigations/home-navigator';
 
 const Drawer = createDrawerNavigator();
 
@@ -68,7 +67,7 @@ const AppNavigator = () => {
                 }}>
                 <Drawer.Screen
                     name="Home"
-                    component={HomeNavigator}
+                    component={Home}
                     options={{
                         title: 'Home',
                     }}
@@ -79,3 +78,5 @@ const AppNavigator = () => {
 };
 
 export default AppNavigator;
+
+const Home = () => <Text>Home</Text>;

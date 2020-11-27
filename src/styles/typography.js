@@ -1,4 +1,4 @@
-import {scaleFont} from './mixins';
+import { scaleFont } from './mixins';
 
 // FONT FAMILY
 export const FONT_FAMILY_REGULAR = 'OpenSans-Regular';
@@ -20,11 +20,29 @@ export const LINE_HEIGHT_16 = scaleFont(16);
 
 // FONT STYLE
 export const FONT_REGULAR = {
-  fontFamily: FONT_FAMILY_REGULAR,
-  fontWeight: FONT_WEIGHT_REGULAR,
+    fontFamily: FONT_FAMILY_REGULAR,
+    fontWeight: FONT_WEIGHT_REGULAR,
 };
 
 export const FONT_BOLD = {
-  fontFamily: FONT_FAMILY_BOLD,
-  fontWeight: FONT_WEIGHT_BOLD,
+    fontFamily: FONT_FAMILY_BOLD,
+    fontWeight: FONT_WEIGHT_BOLD,
+};
+
+// Heading
+export const HEADING_1 = {
+    fontWeight: FONT_WEIGHT_BOLD,
+    fontSize: 40,
+};
+export const HEADING_2 = {
+    fontWeight: FONT_WEIGHT_BOLD,
+    fontSize: 34,
+};
+export const HEADING_3 = {
+    fontWeight: FONT_WEIGHT_BOLD,
+    fontSize: 28,
+};
+export const HEADING_4 = {
+    fontWeight: FONT_WEIGHT_BOLD,
+    fontSize: 22,
 };
