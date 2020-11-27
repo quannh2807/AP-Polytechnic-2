@@ -8,7 +8,6 @@ import img2 from '_assets/images/giao-tiep-1.png';
 import img3 from '_assets/images/giao-tiep-3.png';
 
 const { width } = Dimensions.get('window');
-console.log(width);
 
 const SwiperMolecule = () => (
     <Swiper

@@ -1,4 +1,5 @@
 export const PRIMARY = '#F95C00';
+export const SECONDARY = '#0096EA';
 export const WHITE = '#FFFFFF';
 export const BLACK = '#000000';
 

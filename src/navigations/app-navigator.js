@@ -64,7 +64,8 @@ const AppNavigator = () => {
                     },
                     activeTintColor: '#41a6dc',
                     inactiveTintColor: 'gray',
-                }}>
+                }}
+            >
                 <Drawer.Screen
                     name="Home"
                     component={Home}

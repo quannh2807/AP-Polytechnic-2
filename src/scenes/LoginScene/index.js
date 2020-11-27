@@ -1,5 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Alert } from 'react-native';
+import {
+    StyleSheet,
+    Text,
+    View,
+    TouchableOpacity,
+    StatusBar,
+    Alert,
+} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import { Colors } from '_styles';
 import Button from '_atoms/Button';
@@ -7,8 +15,12 @@ import Select from '_atoms/Select';
 import SwiperMolecule from '_molecules/SwiperMolecule';
 
 const LoginScene = () => {
+    const navigation = useNavigation();
+
     return (
         <View style={styles.container}>
+            <StatusBar backgroundColor={Colors.WHITE} barStyle="dark-content" />
+
             <View style={styles.header}>
                 <SwiperMolecule />
             </View>
@@ -22,7 +34,7 @@ const LoginScene = () => {
 
                         <TouchableOpacity
                             style={styles.button}
-                            onPress={() => Alert.alert('say hi')}
+                            onPress={() => navigation.navigate('App')}
                         >
                             <Button
                                 title="Đăng nhập bằng Google"
@@ -56,7 +68,7 @@ const LoginScene = () => {
                         </Text>
                     </View>
                     <View style={styles.help}>
-                        <Text>Giúp đỡ</Text>
+                        <Text style={{ color: Colors.SECONDARY }}>Giúp đỡ</Text>
                     </View>
                 </View>
             </View>
