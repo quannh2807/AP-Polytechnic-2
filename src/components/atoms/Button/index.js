@@ -4,8 +4,8 @@ import { Colors, Typography } from '_styles';
 import CutomIcon from '_atoms/CutomIcon';
 
 const Button = ({
-    title = 'Default button',
-    color = Colors.BLACK,
+    title = 'Đăng nhập',
+    color = Colors.PRIMARY,
     borderColor = color,
     icon = null,
 }) => {
