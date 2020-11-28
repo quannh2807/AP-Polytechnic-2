@@ -9,8 +9,11 @@ const AuthStack = createStackNavigator();
 const AuthNavigator = () => {
     return (
         <AuthStack.Navigator initialRouteName="Login" headerMode="none">
-            {/* <AuthStack.Screen name="Login" component={LoginScene} /> */}
-            <AuthStack.Screen name="Login" component={LoginParentsScene} /> 
+            <AuthStack.Screen name="Login" component={LoginScene} />
+            <AuthStack.Screen
+                name="ParentLogin"
+                component={LoginParentsScene}
+            />
         </AuthStack.Navigator>
     );
 };
