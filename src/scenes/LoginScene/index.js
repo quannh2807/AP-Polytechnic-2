@@ -5,7 +5,6 @@ import {
     View,
     TouchableOpacity,
     StatusBar,
-    Alert,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
@@ -51,7 +50,7 @@ const LoginScene = () => {
 
                         <TouchableOpacity
                             style={styles.button}
-                            onPress={() => Alert.alert('say hi')}
+                            onPress={() => navigation.navigate('ParentLogin')}
                         >
                             <Button title="Đăng nhập bằng tài khoản phụ huynh" />
                         </TouchableOpacity>
