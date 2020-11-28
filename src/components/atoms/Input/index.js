@@ -1,15 +1,11 @@
 import React from "react";
 import { StyleSheet, TextInput } from "react-native";
 
-const Input = ({
-    placeholder = "Nhập số điện thoại phụ huynh học sinh",
-    styles,
-    handleHideText,
-}) => (
+const Input = ({ placeholder, ...inputProps }) => (
     <TextInput
-        style={[stylesIput.inputStyle, styles.atoms]}
+        style={stylesIput.inputStyle}
+        {...inputProps}
         placeholder={placeholder}
-        onChange={() => handleHideText(false)}
     />
 );
 

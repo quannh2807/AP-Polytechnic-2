@@ -59,12 +59,14 @@ const LoginScene = () => {
 
                 <View style={styles.moreInfo}>
                     <View style={styles.version}>
-                        <Text style={{ color: Colors.GRAY_MEDIUM }}>
-                            Phiên bản 0.1
-                        </Text>
-                        <Text style={{ color: Colors.GRAY_MEDIUM }}>
-                            Bản quyền FPT
-                        </Text>
+                        <View>
+                            <Text style={{ color: Colors.GRAY_MEDIUM }}>
+                                Phiên bản 0.1
+                            </Text>
+                            <Text style={{ color: Colors.GRAY_MEDIUM }}>
+                                Bản quyền FPT
+                            </Text>
+                        </View>
                     </View>
                     <View style={styles.help}>
                         <Text style={{ color: Colors.SECONDARY }}>Giúp đỡ</Text>
@@ -94,7 +96,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF',
     },
 
-    hocSinh: {},
     picker: {
         borderColor: '#000',
         borderWidth: 2,
@@ -132,11 +133,9 @@ const styles = StyleSheet.create({
     version: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center',
     },
     help: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center',
     },
 });
