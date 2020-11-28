@@ -33,17 +33,25 @@ export const FONT_BOLD = {
 // Heading
 export const HEADING_1 = {
     fontWeight: FONT_WEIGHT_BOLD,
-    fontSize: 40,
+    fontSize: 36,
 };
 export const HEADING_2 = {
     fontWeight: FONT_WEIGHT_BOLD,
-    fontSize: 34,
+    fontSize: 30,
 };
 export const HEADING_3 = {
     fontWeight: FONT_WEIGHT_BOLD,
-    fontSize: 28,
+    fontSize: 24,
 };
 export const HEADING_4 = {
     fontWeight: FONT_WEIGHT_BOLD,
-    fontSize: 22,
+    fontSize: 20,
+};
+export const HEADING_5 = {
+    fontWeight: FONT_WEIGHT_BOLD,
+    fontSize: 18,
+};
+export const HEADING_6 = {
+    fontWeight: FONT_WEIGHT_BOLD,
+    fontSize: 16,
 };

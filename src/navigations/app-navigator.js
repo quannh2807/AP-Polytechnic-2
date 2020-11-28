@@ -5,6 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { Colors } from '_styles';
 import Home from '_navigations/home-navigator';
+import DrawerContent from '_navigations/DrawerContent';
 
 const Drawer = createDrawerNavigator();
 
@@ -52,6 +53,7 @@ const AppNavigator = () => {
                 activeTintColor: Colors.PRIMARY,
                 inactiveTintColor: 'gray',
             }}
+            drawerContent={(props) => <DrawerContent />}
         >
             <Drawer.Screen
                 name="Home"

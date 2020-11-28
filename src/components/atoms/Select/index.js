@@ -4,19 +4,32 @@ import { Picker } from '@react-native-picker/picker';
 import { Colors } from '_styles';
 
 const Select = () => {
-    const [CoSoDaoTao, SetCoSoDaoTao] = useState('default');
+    const [coSoDT, setCoSoDT] = useState([
+        { id: 1, label: 'Hà Nội', value: 'hanoi' },
+        { id: 2, label: 'Đà Nẵng', value: 'dangnang' },
+        { id: 3, label: 'Thành phố Hồ Chí Minh', value: 'hcm' },
+        { id: 4, label: 'Tây Nguyên', value: 'taynguyen' },
+        { id: 5, label: 'Cần Thơ', value: 'cantho' },
+        { id: 6, label: 'HiTech', value: 'hitech' },
+    ]);
+    const [selected, setSelected] = useState('default');
 
     return (
         <Picker
-            selectedValue={CoSoDaoTao}
-            onValueChange={(itemValue) => SetCoSoDaoTao(itemValue)}
+            selectedValue={selected}
+            onValueChange={(itemValue) => setSelected(itemValue)}
             style={styles.pickerStyle}
             dropdownIconColor={Colors.BLACK}
             prompt="Chọn cơ sở đào tạo"
         >
             <Picker.Item label="Chọn cơ sở đào tạo" value="default" />
-            <Picker.Item label="Java" value="java" />
-            <Picker.Item label="JavaScript" value="js" />
+            {coSoDT.map((item, index) => (
+                <Picker.Item
+                    label={item.label}
+                    value={item.value}
+                    key={index}
+                />
+            ))}
         </Picker>
     );
 };
