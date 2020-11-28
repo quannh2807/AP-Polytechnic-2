@@ -23,8 +23,12 @@ const Select = () => {
             prompt="Chọn cơ sở đào tạo"
         >
             <Picker.Item label="Chọn cơ sở đào tạo" value="default" />
-            {coSoDT.map((item) => (
-                <Picker.Item label={item.label} value={item.value} />
+            {coSoDT.map((item, index) => (
+                <Picker.Item
+                    label={item.label}
+                    value={item.value}
+                    key={index}
+                />
             ))}
         </Picker>
     );
