@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, Alert } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
 import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -31,11 +31,11 @@ const DrawerContent = (props) => {
 
                     <View>
                         <DrawerItem
-                            icon={({ color, size }) => (
+                            icon={({ focused, color, size }) => (
                                 <Icon
-                                    name="home-outline"
                                     color={color}
                                     size={size}
+                                    name={focused ? 'home' : 'home-outline'}
                                 />
                             )}
                             label="Trang chủ"
@@ -43,11 +43,15 @@ const DrawerContent = (props) => {
                         />
 
                         <DrawerItem
-                            icon={({ color, size }) => (
+                            icon={({ focused, color, size }) => (
                                 <Icon
-                                    name="person-circle-outline"
                                     color={color}
                                     size={size}
+                                    name={
+                                        focused
+                                            ? 'person-circle'
+                                            : 'person-circle-outline'
+                                    }
                                 />
                             )}
                             label="Thông tin cá nhân"
@@ -61,15 +65,17 @@ const DrawerContent = (props) => {
 
             <View style={styles.bottomDrawer}>
                 <DrawerItem
-                    icon={({ color, size }) => (
+                    icon={({ focused, color, size }) => (
                         <Icon
-                            name="log-out-outline"
                             color={color}
                             size={size}
+                            name={focused ? 'log-out' : 'log-out-outline'}
                         />
                     )}
                     label="Đăng xuất"
                     onPress={() => navigation.navigate('Logout')}
+                    activeTintColor={Colors.PRIMARY}
+                    activeBackgroundColor={Colors.PRIMARY}
                 />
             </View>
         </View>
@@ -108,8 +114,8 @@ const styles = StyleSheet.create({
     },
 
     bottomDrawer: {
-        marginBottom: 15,
         borderTopColor: '#f4f4f4',
         borderTopWidth: 1,
+        paddingVertical: 30,
     },
 });

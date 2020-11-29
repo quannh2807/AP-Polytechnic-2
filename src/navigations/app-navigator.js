@@ -1,11 +1,10 @@
 import React from 'react';
 import { useWindowDimensions, Text } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import { Colors } from '_styles';
 import Home from '_navigations/home-navigator';
 import DrawerContent from '_navigations/DrawerContent';
+import PersonalInfoScene from '_scenes/PersonalInfoScene';
 
 const Drawer = createDrawerNavigator();
 
@@ -17,57 +16,13 @@ const AppNavigator = () => {
     return (
         <Drawer.Navigator
             initialRouteName="Home"
-            screenOptions={({ route }) => ({
-                drawerIcon: ({ focused, color, size }) => {
-                    let iconName;
-
-                    switch (route.name) {
-                        case 'Home':
-                            iconName = focused
-                                ? 'home-outline'
-                                : 'home-outline';
-                            break;
-                        case 'PersonalInfomation':
-                            iconName = focused
-                                ? 'information'
-                                : 'information-outline';
-                            break;
-                        case 'Logout':
-                            iconName = focused ? 'log-out' : 'log-out-outline';
-                            break;
-
-                        default:
-                            break;
-                    }
-
-                    return (
-                        <Ionicons name={iconName} size={size} color={color} />
-                    );
-                },
-            })}
             drawerType={isLargeScreen ? 'permanent' : 'back'}
-            drawerContentOptions={{
-                labelStyle: {
-                    fontSize: 16,
-                },
-                activeTintColor: Colors.PRIMARY,
-                inactiveTintColor: 'gray',
-            }}
-            drawerContent={(props) => <DrawerContent />}
+            drawerContent={(props) => <DrawerContent props={props} />}
         >
-            <Drawer.Screen
-                name="Home"
-                component={Home}
-                options={{
-                    title: 'Trang chủ',
-                }}
-            />
+            <Drawer.Screen name="Home" component={Home} />
             <Drawer.Screen
                 name="PersonalInfomation"
-                component={PersonalInfomation}
-                options={{
-                    title: 'Thông tin cá nhân',
-                }}
+                component={PersonalInfoScene}
             />
 
             <Drawer.Screen
