@@ -15,10 +15,11 @@ const stylesIput = StyleSheet.create({
     inputStyle: {
         borderRadius: 30,
         width: 322,
-        height: 60,
+        height: 50,
         backgroundColor: "#f0f0f0",
-        paddingLeft: 20,
+        paddingHorizontal: 20,
         fontSize: 14,
+        paddingVertical: 0,
         borderWidth: 0.1,
     },
 });

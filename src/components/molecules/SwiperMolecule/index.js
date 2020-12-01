@@ -51,7 +51,6 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         borderWidth: 1,
         backgroundColor: 'rgba(255, 0, 0, 0)',
-
         width: 15,
         height: 15,
     },
@@ -59,7 +58,6 @@ const styles = StyleSheet.create({
     activeDotStyle: {
         backgroundColor: Colors.PRIMARY,
         borderRadius: 15,
-
         width: 15,
         height: 15,
     },
