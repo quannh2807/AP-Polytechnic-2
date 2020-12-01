@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Colors, Typography } from '_styles';
-import CutomIcon from '_atoms/CutomIcon';
+import CustomIcon from '_atoms/CustomIcon';
 
 const Button = ({
     title = 'Đăng nhập',
@@ -21,7 +21,7 @@ const Button = ({
                 { borderColor: borderColor },
             ]}
         >
-            {icon && <CutomIcon name={icon} color={color} />}
+            {icon && <CustomIcon name={icon} color={color} />}
             <Text style={[styles.text, Typography.FONT_BOLD, { color: color }]}>
                 {title}
             </Text>
