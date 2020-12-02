@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { Typography, Colors } from '_styles';
 import avatar from '_assets/images/avatar.jpg';
 
-const DrawerContent = (props) => {
+const DrawerScene = (props) => {
     const navigation = useNavigation();
 
     return (
@@ -73,16 +73,14 @@ const DrawerContent = (props) => {
                         />
                     )}
                     label="Đăng xuất"
-                    onPress={() => navigation.navigate('Logout')}
-                    activeTintColor={Colors.PRIMARY}
-                    activeBackgroundColor={Colors.PRIMARY}
+                    onPress={() => navigation.navigate('Auth')}
                 />
             </View>
         </View>
     );
 };
 
-export default DrawerContent;
+export default DrawerScene;
 
 const styles = StyleSheet.create({
     container: {
