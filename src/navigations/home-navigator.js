@@ -4,10 +4,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { Colors } from '_styles';
+import NewsScene from '_scenes/NewsScene';
+import DetailNewsScene from '_scenes/DetailNewsScene';
 import CustomStatusBar from '_molecules/CustomStatusBar';
 import NotificationBar from '_molecules/NotificationBar';
-
-import NewsScene from '_scenes/NewsScene';
 
 const HomeBottomTab = createBottomTabNavigator();
 
@@ -78,6 +78,7 @@ const HomeNavigator = () => (
             }}
             initialRouteName="News"
         >
+            <HomeBottomTab.Screen name="DetailEmpty" component={DetailNewsScene} />
             <HomeBottomTab.Screen name="News" component={NewsScene} />
             <HomeBottomTab.Screen name="Schedule" component={ScheduleScreen} />
             <HomeBottomTab.Screen name="Score" component={ScoreScreen} />

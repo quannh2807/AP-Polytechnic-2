@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import InputMoleCule from '_molecules/InputMoleCule';
 import Button from '_atoms/Button';
@@ -10,6 +11,7 @@ import { Colors } from '_styles';
 const LoginParents = () => {
     const placeHoldeUsername = 'Username: nhập số điện thoại phụ huynh';
     const placeHoldePassword = 'Password';
+    const navigation = useNavigation();
 
     return (
         <View style={styles.container}>
@@ -18,12 +20,19 @@ const LoginParents = () => {
             </View>
 
             <View>
-                <InputMoleCule placeholder={placeHoldeUsername} />
-                <InputMoleCule placeholder={placeHoldePassword} />
-
-                <View style={styles.button}>
-                    <Button color={Colors.PRIMARY} />
+                <View style={styles.input}>
+                    <InputMoleCule placeholder={placeHoldeUsername} />
                 </View>
+                <View style={styles.input}>
+                    <InputMoleCule placeholder={placeHoldePassword} />
+                </View>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('News')}
+                >
+                    <View style={styles.button}>
+                        <Button color={Colors.PRIMARY} />
+                    </View>
+                </TouchableOpacity>
             </View>
 
             <View style={styles.paragraphs}>
@@ -46,7 +55,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'space-evenly',
         alignItems: 'center',
-
         backgroundColor: '#fff',
     },
 
@@ -59,5 +67,8 @@ const styles = StyleSheet.create({
     button: {
         paddingVertical: 20,
     },
+    input: {
+        paddingVertical: 10
+    }
 });
 export default LoginParents;
