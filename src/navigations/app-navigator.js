@@ -25,8 +25,8 @@ const AppNavigator = () => (
                         options.headerTitle !== undefined
                             ? options.headerTitle
                             : options.title !== undefined
-                            ? options.title
-                            : scene.route.name;
+                                ? options.title
+                                : scene.route.name;
 
                     return (
                         <MyHeader
