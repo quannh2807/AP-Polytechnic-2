@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, ScrollView } from 'react-native';
+import GoBackHeader from '_molecules/GoBackHeader';
 
 import PersonalInfoOrganism from '_organisms/PersonalInfoOrganism';
 
@@ -43,6 +44,8 @@ const PersonalInfoScene = () => {
 
     return (
         <ScrollView style={styles.container}>
+            <GoBackHeader route="Home" titleContent="Thông tin cá nhân" />
+
             <View style={styles.mainSection}>
                 {thongTinSinhVien.map((item, index) => (
                     <PersonalInfoOrganism thongTin={item} key={index} />

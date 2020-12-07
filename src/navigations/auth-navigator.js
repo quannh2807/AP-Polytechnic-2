@@ -1,12 +1,8 @@
 import React from 'react';
-import { TouchableOpacity, Alert } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-
-import CustomIcon from '_atoms/CustomIcon';
 
 import LoginScene from '_scenes/LoginScene';
 import LoginParentsScene from '_scenes/LoginParentsScene';
-import { Colors } from '_styles';
 
 const AuthStack = createStackNavigator();
 
