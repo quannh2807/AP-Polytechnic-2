@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import AuthNavigator from '_navigations/auth-navigator';
 import AppNavigator from '_navigations/app-navigator';
 import DetailNewsScene from '_scenes/DetailNewsScene';
+import TableScene from '_scenes/TableScene';
 
 const RootStack = createStackNavigator();
 
@@ -14,6 +15,7 @@ const RootNavigator = () => (
             <RootStack.Screen name="Auth" children={AuthNavigator} />
             <RootStack.Screen name="App" children={AppNavigator} />
             <RootStack.Screen name="DetailEmpty" component={DetailNewsScene} />
+            <RootStack.Screen name="Table" component={TableScene} />
         </RootStack.Navigator>
     </NavigationContainer>
 );

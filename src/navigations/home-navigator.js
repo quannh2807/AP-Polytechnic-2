@@ -5,8 +5,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { Colors } from '_styles';
 import NewsScene from '_scenes/NewsScene';
-import ScheduleNavigator from '_navigations/schedule-navigator';
-
+import ScoreScene from '_scenes/ScoreScene';
+import SchedleNavigator from '_navigations/schedule-navigator';
 import CustomStatusBar from '_molecules/CustomStatusBar';
 import NotificationBar from '_molecules/NotificationBar';
 
@@ -82,9 +82,9 @@ const HomeNavigator = () => (
             <HomeBottomTab.Screen name="News" component={NewsScene} />
             <HomeBottomTab.Screen
                 name="Schedule"
-                component={ScheduleNavigator}
+                component={SchedleNavigator}
             />
-            <HomeBottomTab.Screen name="Score" component={ScoreScreen} />
+            <HomeBottomTab.Screen name="Score" component={ScoreScene} />
             <HomeBottomTab.Screen name="Option" component={OptionStack} />
         </HomeBottomTab.Navigator>
     </>
@@ -92,5 +92,4 @@ const HomeNavigator = () => (
 
 export default HomeNavigator;
 
-const ScoreScreen = () => <Text>News Screen</Text>;
 const OptionStack = () => <Text>News Screen</Text>;

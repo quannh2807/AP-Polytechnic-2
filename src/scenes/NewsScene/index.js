@@ -72,7 +72,7 @@ const NewsScene = () => {
                 tabBarOptions={{
                     labelStyle: {
                         fontSize: 15,
-                        textTransform: 'capitalize',
+                        textTransform: 'none',
                     },
                     activeTintColor: PRIMARY,
                     inactiveTintColor: 'black',
