@@ -3,19 +3,23 @@ import { View, Text, StyleSheet } from 'react-native';
 import { Dimensions } from 'react-native';
 
 import { GRAY_MEDIUM, GRAY_LIGHT } from '_styles/colors';
+import TextBold from '_atoms/TextBold';
+import TextOpacity from '_atoms/TextOpacity';
 
 const windowHeight = Dimensions.get('window').height;
 
 const DetailEmptyTemPlate = ({ route }) => {
-    const { text } = route.params;
+    const { text, user, created_at } = route.params;
     return (
         <View style={styles.container}>
             <View style={styles.box}>
-                <Text> {text}</Text>
+                <TextBold text={text} />
+                <TextOpacity text={user} />
+                <TextOpacity text={created_at} />
             </View>
         </View>
-    )
-}
+    );
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -26,7 +30,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         padding: 10,
         height: windowHeight,
-        borderRadius: 5
-    }
-})
+        borderRadius: 5,
+    },
+});
+
 export default DetailEmptyTemPlate;
