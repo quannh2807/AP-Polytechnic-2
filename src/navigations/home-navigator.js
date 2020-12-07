@@ -5,7 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { Colors } from '_styles';
 import NewsScene from '_scenes/NewsScene';
-import ScheduleScene from '_scenes/ScheduleScene';
+import ScheduleNavigator from '_navigations/schedule-navigator';
 
 import CustomStatusBar from '_molecules/CustomStatusBar';
 import NotificationBar from '_molecules/NotificationBar';
@@ -80,7 +80,10 @@ const HomeNavigator = () => (
             initialRouteName="News"
         >
             <HomeBottomTab.Screen name="News" component={NewsScene} />
-            <HomeBottomTab.Screen name="Schedule" component={ScheduleScene} />
+            <HomeBottomTab.Screen
+                name="Schedule"
+                component={ScheduleNavigator}
+            />
             <HomeBottomTab.Screen name="Score" component={ScoreScreen} />
             <HomeBottomTab.Screen name="Option" component={OptionStack} />
         </HomeBottomTab.Navigator>

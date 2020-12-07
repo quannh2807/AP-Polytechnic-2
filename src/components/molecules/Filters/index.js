@@ -6,9 +6,14 @@ import { Colors } from '_styles';
 
 const Filters = () => {
     const [filters, setFilters] = useState([
-        { id: 1, label: '7 ngày tới', value: '7ngay' },
-        { id: 2, label: '14 ngày tới', value: '14ngay' },
-        { id: 3, label: '30 ngày tới', value: '30ngay' },
+        { id: 1, label: '7 ngày tới', value: '7ngayToi' },
+        { id: 2, label: '14 ngày tới', value: '14ngayToi' },
+        { id: 3, label: '30 ngày tới', value: '30ngayToi' },
+        { id: 4, label: '90 ngày tới', value: '30ngayToi' },
+        { id: 5, label: '7 ngày trước', value: '7ngayTruoc' },
+        { id: 6, label: '14 ngày trước', value: '14ngayTruoc' },
+        { id: 7, label: '30 ngày trước', value: '30ngayTruoc' },
+        { id: 8, label: '90 ngày trước', value: '30ngayTruoc' },
     ]);
 
     const [selected, setSelected] = useState('7ngay');
@@ -34,7 +39,7 @@ const Filters = () => {
             </View>
 
             <Text style={styles.title}>
-                Lựa chọn thời gian để hiển thị chi tiết lịch học
+                Lựa chọn thời gian để hiển thị chi tiết
             </Text>
         </View>
     );

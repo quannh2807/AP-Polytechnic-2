@@ -1,13 +1,13 @@
 import React from 'react';
-import { Text } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
 import { Colors } from '_styles';
-import ScheduleTemplate from '_templates/ScheduleTemplate';
+import LichHocScene from '_scenes/LichHocScene';
+import LichThiScene from '_scenes/LichThiScene';
 
 const ScheduleTab = createMaterialTopTabNavigator();
 
-const ScheduleScene = () => {
+const ScheduleNavigator = () => {
     return (
         <ScheduleTab.Navigator
             tabBarOptions={{
@@ -24,21 +24,21 @@ const ScheduleScene = () => {
         >
             <ScheduleTab.Screen
                 name="LichHoc"
-                component={ScheduleTemplate}
+                component={LichHocScene}
                 options={{
                     title: 'Lịch học',
                 }}
             />
             <ScheduleTab.Screen
                 name="LichThi"
-                component={demo}
+                component={LichThiScene}
                 options={{
                     title: 'Lịch thi',
                 }}
             />
             <ScheduleTab.Screen
                 name="DiemDanh"
-                component={demo}
+                component={LichThiScene}
                 options={{
                     title: 'Điểm danh',
                 }}
@@ -47,6 +47,4 @@ const ScheduleScene = () => {
     );
 };
 
-export default ScheduleScene;
-
-const demo = () => <Text>ANC</Text>;
+export default ScheduleNavigator;

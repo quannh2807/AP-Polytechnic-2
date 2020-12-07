@@ -10,7 +10,12 @@ const ScheduleItem = ({ item }) => {
 
     return (
         <View style={styles.container}>
-            <View style={styles.headerSection}>
+            <View
+                style={[
+                    styles.headerSection,
+                    { paddingBottom: expand ? 10 : 0 },
+                ]}
+            >
                 <View style={styles.leftSection}>
                     <Text style={Typography.FONT_BOLD}>{item.phong}</Text>
                     <Text> - </Text>
@@ -32,7 +37,7 @@ const ScheduleItem = ({ item }) => {
                                 ? 'chevron-forward-outline'
                                 : 'chevron-down-outline'
                         }
-                        color={Colors.GRAY_DARK}
+                        color={!expand ? Colors.GRAY_DARK : Colors.PRIMARY}
                         size={28}
                     />
                 </TouchableOpacity>
@@ -91,7 +96,8 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: Colors.WHITE,
         borderRadius: 8,
-        marginBottom: 5,
+        marginBottom: 8,
+        paddingVertical: 15,
     },
 
     headerSection: {
@@ -100,7 +106,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
 
         paddingHorizontal: 5,
-        paddingVertical: 10,
     },
 
     leftSection: {
@@ -123,6 +128,7 @@ const styles = StyleSheet.create({
     },
     rightSection: {
         flex: 1,
+        height: 50,
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -131,7 +137,7 @@ const styles = StyleSheet.create({
         borderTopColor: Colors.GRAY_LIGHT,
         borderTopWidth: 1,
         paddingHorizontal: 5,
-        paddingVertical: 10,
+        paddingTop: 10,
 
         flexDirection: 'row',
         justifyContent: 'space-between',
