@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     StyleSheet,
     Text,
@@ -16,6 +16,15 @@ import SwiperMolecule from '_molecules/SwiperMolecule';
 const LoginScene = () => {
     const navigation = useNavigation();
 
+    const [coSoDT, setCoSoDT] = useState([
+        { id: 1, label: 'Hà Nội', value: 'hanoi' },
+        { id: 2, label: 'Đà Nẵng', value: 'dangnang' },
+        { id: 3, label: 'Thành phố Hồ Chí Minh', value: 'hcm' },
+        { id: 4, label: 'Tây Nguyên', value: 'taynguyen' },
+        { id: 5, label: 'Cần Thơ', value: 'cantho' },
+        { id: 6, label: 'HiTech', value: 'hitech' },
+    ]);
+
     return (
         <View style={styles.container}>
             <StatusBar backgroundColor={Colors.WHITE} barStyle="dark-content" />
@@ -28,7 +37,7 @@ const LoginScene = () => {
                 <View style={styles.mainInfo}>
                     <View style={styles.hocSinh}>
                         <View style={[styles.picker, styles.button]}>
-                            <Select />
+                            <Select data={coSoDT} />
                         </View>
 
                         <TouchableOpacity
