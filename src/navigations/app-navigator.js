@@ -19,9 +19,6 @@ const AppNavigator = () => (
             name="PersonalInfomation"
             component={PersonalInfoScene}
         />
-        <Drawer.Screen name="Logout" component={Logout} />
     </Drawer.Navigator>
 );
 export default AppNavigator;
-
-const Logout = () => <Text>Logout</Text>;

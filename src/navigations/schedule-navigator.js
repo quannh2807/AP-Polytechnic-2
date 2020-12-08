@@ -4,6 +4,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import { Colors } from '_styles';
 import LichHocScene from '_scenes/LichHocScene';
 import LichThiScene from '_scenes/LichThiScene';
+import DiemDanhScene from '_scenes/DiemDanhScene';
 
 const ScheduleTab = createMaterialTopTabNavigator();
 
@@ -21,6 +22,7 @@ const ScheduleNavigator = () => {
                     backgroundColor: Colors.PRIMARY,
                 },
             }}
+            initialRouteName="LichHoc"
         >
             <ScheduleTab.Screen
                 name="LichHoc"
@@ -38,7 +40,7 @@ const ScheduleNavigator = () => {
             />
             <ScheduleTab.Screen
                 name="DiemDanh"
-                component={LichThiScene}
+                component={DiemDanhScene}
                 options={{
                     title: 'Điểm danh',
                 }}
