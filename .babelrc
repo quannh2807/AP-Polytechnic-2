@@ -17,6 +17,7 @@
           "_scenes": "./src/scenes",
           "_services": "./src/services",
           "_utils": "./src/utils",
+          "_constants": "./src/constants",
           "_styles": "./src/styles"
         }
       }

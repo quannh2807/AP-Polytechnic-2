@@ -3,15 +3,7 @@ import { StyleSheet } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import { Colors } from '_styles';
 
-const Select = () => {
-    const [coSoDT, setCoSoDT] = useState([
-        { id: 1, label: 'Hà Nội', value: 'hanoi' },
-        { id: 2, label: 'Đà Nẵng', value: 'dangnang' },
-        { id: 3, label: 'Thành phố Hồ Chí Minh', value: 'hcm' },
-        { id: 4, label: 'Tây Nguyên', value: 'taynguyen' },
-        { id: 5, label: 'Cần Thơ', value: 'cantho' },
-        { id: 6, label: 'HiTech', value: 'hitech' },
-    ]);
+const Select = ({ data }) => {
     const [selected, setSelected] = useState('default');
 
     return (
@@ -23,7 +15,7 @@ const Select = () => {
             prompt="Chọn cơ sở đào tạo"
         >
             <Picker.Item label="Chọn cơ sở đào tạo" value="default" />
-            {coSoDT.map((item, index) => (
+            {data.map((item, index) => (
                 <Picker.Item
                     label={item.label}
                     value={item.value}

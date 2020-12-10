@@ -71,7 +71,8 @@ const NewsScene = () => {
             <Tab.Navigator
                 tabBarOptions={{
                     labelStyle: {
-                        fontSize: 16,
+                        fontSize: 15,
+                        textTransform: 'capitalize',
                     },
                     activeTintColor: PRIMARY,
                     inactiveTintColor: 'black',
@@ -85,19 +86,19 @@ const NewsScene = () => {
                     children={() => {
                         return <NewsTemplate data={data} />;
                     }}
-                ></Tab.Screen>
+                />
                 <Tab.Screen
                     name="Hoạt Động"
                     children={() => {
                         return <NewsTemplate data={data} />;
                     }}
-                ></Tab.Screen>
+                />
                 <Tab.Screen
                     name="Chi Phí"
                     children={() => {
                         return <NewsTemplate data={data} />;
                     }}
-                ></Tab.Screen>
+                />
             </Tab.Navigator>
         </View>
     );

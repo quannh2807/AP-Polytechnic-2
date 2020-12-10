@@ -18,35 +18,7 @@ const AppNavigator = () => (
         <Drawer.Screen
             name="PersonalInfomation"
             component={PersonalInfoScene}
-            options={{
-                header: ({ scene }) => {
-                    const { options } = scene.descriptor;
-                    const title =
-                        options.headerTitle !== undefined
-                            ? options.headerTitle
-                            : options.title !== undefined
-                                ? options.title
-                                : scene.route.name;
-
-                    return (
-                        <MyHeader
-                            title={title}
-                            leftButton={
-                                <DrawerToggleButton
-                                    onPress={
-                                        scene.descriptor.navigation.toggleDrawer
-                                    }
-                                />
-                            }
-                            style={options.headerStyle}
-                        />
-                    );
-                },
-            }}
         />
-        <Drawer.Screen name="Logout" component={Logout} />
     </Drawer.Navigator>
 );
 export default AppNavigator;
-
-const Logout = () => <Text>Logout</Text>;
