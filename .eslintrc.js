@@ -7,6 +7,7 @@ module.exports = {
             node: {
                 paths: ['src'],
                 alias: {
+                    _api: './src/api',
                     _assets: './src/assets',
                     _components: './src/components',
                     _atoms: './src/components/atoms',
