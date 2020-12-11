@@ -84,6 +84,6 @@ const styles = StyleSheet.create({
     titleContent: {
         color: Colors.WHITE,
         fontSize: Typography.FONT_SIZE_16,
-        textTransform: 'capitalize',
+        textTransform: 'none',
     },
 });

@@ -1,13 +1,12 @@
 import React from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { StyleSheet, View } from 'react-native';
 
 import { PRIMARY } from '_styles/colors';
 import NewsTemplate from '_templates/NewsTemplate';
 
 const Tab = createMaterialTopTabNavigator();
 
-const NewsScene = () => {
+const NewsNavigator = () => {
     const data = [
         {
             id: '1',
@@ -67,46 +66,39 @@ const NewsScene = () => {
         },
     ];
     return (
-        <View style={styles.container}>
-            <Tab.Navigator
-                tabBarOptions={{
-                    labelStyle: {
-                        fontSize: 15,
-                        textTransform: 'none',
-                    },
-                    activeTintColor: PRIMARY,
-                    inactiveTintColor: 'black',
-                    indicatorStyle: {
-                        backgroundColor: PRIMARY,
-                    },
+        <Tab.Navigator
+            tabBarOptions={{
+                labelStyle: {
+                    fontSize: 15,
+                    textTransform: 'none',
+                },
+                activeTintColor: PRIMARY,
+                inactiveTintColor: 'black',
+                indicatorStyle: {
+                    backgroundColor: PRIMARY,
+                },
+            }}
+        >
+            <Tab.Screen
+                name="Học tập"
+                children={() => {
+                    return <NewsTemplate data={data} />;
                 }}
-            >
-                <Tab.Screen
-                    name="Học tập"
-                    children={() => {
-                        return <NewsTemplate data={data} />;
-                    }}
-                />
-                <Tab.Screen
-                    name="Hoạt động"
-                    children={() => {
-                        return <NewsTemplate data={data} />;
-                    }}
-                />
-                <Tab.Screen
-                    name="Chi phí"
-                    children={() => {
-                        return <NewsTemplate data={data} />;
-                    }}
-                />
-            </Tab.Navigator>
-        </View>
+            />
+            <Tab.Screen
+                name="Hoạt động"
+                children={() => {
+                    return <NewsTemplate data={data} />;
+                }}
+            />
+            <Tab.Screen
+                name="Chi phí"
+                children={() => {
+                    return <NewsTemplate data={data} />;
+                }}
+            />
+        </Tab.Navigator>
     );
 };
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-});
-export default NewsScene;
+export default NewsNavigator;
