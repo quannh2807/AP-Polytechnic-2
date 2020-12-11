@@ -3,7 +3,7 @@ import { StyleSheet, View, FlatList } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import ScoreOrganism from '_organisms/ScoreOrganism';
-import { GRAY_LIGHT } from '_styles/colors';
+import { BG_LIGHT } from '_styles/colors';
 
 const ScoreTemplate = ({ data, tableHead }) => {
     const navigation = useNavigation();
@@ -35,7 +35,7 @@ const ScoreTemplate = ({ data, tableHead }) => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: GRAY_LIGHT,
+        backgroundColor: BG_LIGHT,
         paddingTop: 5,
         flex: 1,
     },

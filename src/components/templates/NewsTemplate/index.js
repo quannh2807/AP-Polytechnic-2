@@ -3,7 +3,7 @@ import { StyleSheet, View, FlatList } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import NewsOrganims from '_organisms/NewsOrganism';
-import { GRAY_LIGHT } from '_styles/colors';
+import { BG_LIGHT } from '_styles/colors';
 
 const NewsTemplate = ({ data }) => {
     const navigation = useNavigation();
@@ -30,7 +30,7 @@ const NewsTemplate = ({ data }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: GRAY_LIGHT,
+        backgroundColor: BG_LIGHT,
         paddingTop: 5,
     },
 });

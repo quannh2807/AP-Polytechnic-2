@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { StyleSheet, View } from 'react-native';
 
 import { PRIMARY } from '_styles/colors';
 import ScoreTemplate from '_templates/ScoreTemplate';
 
 const Tab = createMaterialTopTabNavigator();
 
-const ScoreScene = () => {
+const ScoreNavigator = () => {
     const [score, setScore] = useState(true);
 
     const tableHead = ['Tên đầu điểm', 'Trọng số', 'Điểm'];
-
     const data = [
         {
             id: '1',
@@ -118,65 +116,59 @@ const ScoreScene = () => {
             quiz8: '3.5',
         },
     ];
+
     return (
-        <View style={styles.container}>
-            <Tab.Navigator
-                tabBarOptions={{
-                    labelStyle: {
-                        fontSize: 15,
-                        textTransform: 'none',
-                    },
-                    activeTintColor: PRIMARY,
-                    inactiveTintColor: 'black',
-                    indicatorStyle: {
-                        backgroundColor: PRIMARY,
-                    },
+        <Tab.Navigator
+            tabBarOptions={{
+                labelStyle: {
+                    fontSize: 15,
+                    textTransform: 'none',
+                },
+                activeTintColor: PRIMARY,
+                inactiveTintColor: 'black',
+                indicatorStyle: {
+                    backgroundColor: PRIMARY,
+                },
+            }}
+        >
+            <Tab.Screen
+                name="Kỳ học"
+                children={() => {
+                    return (
+                        <ScoreTemplate
+                            score={score}
+                            data={data}
+                            tableHead={tableHead}
+                        />
+                    );
                 }}
-            >
-                <Tab.Screen
-                    name="Kỳ học"
-                    children={() => {
-                        return (
-                            <ScoreTemplate
-                                score={score}
-                                data={data}
-                                tableHead={tableHead}
-                            />
-                        );
-                    }}
-                />
-                <Tab.Screen
-                    name="Lịch Sử"
-                    children={() => {
-                        return (
-                            <ScoreTemplate
-                                score={score}
-                                data={data}
-                                tableHead={tableHead}
-                            />
-                        );
-                    }}
-                />
-                <Tab.Screen
-                    name="Bảng điểm"
-                    children={() => {
-                        return (
-                            <ScoreTemplate
-                                score={score}
-                                data={data}
-                                tableHead={tableHead}
-                            />
-                        );
-                    }}
-                />
-            </Tab.Navigator>
-        </View>
+            />
+            <Tab.Screen
+                name="Lịch Sử"
+                children={() => {
+                    return (
+                        <ScoreTemplate
+                            score={score}
+                            data={data}
+                            tableHead={tableHead}
+                        />
+                    );
+                }}
+            />
+            <Tab.Screen
+                name="Bảng điểm"
+                children={() => {
+                    return (
+                        <ScoreTemplate
+                            score={score}
+                            data={data}
+                            tableHead={tableHead}
+                        />
+                    );
+                }}
+            />
+        </Tab.Navigator>
     );
 };
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-});
-export default ScoreScene;
+export default ScoreNavigator;
