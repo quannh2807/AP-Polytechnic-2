@@ -16,7 +16,7 @@ const DiemDanhOrganism = ({ subject }) => {
 
     return (
         <View style={styles.container}>
-            <Box nameIcon="chevron-forward-outline">
+            <Box nameIcon="chevron-forward-outline" routeName="ChiTietDiemDanh">
                 <TextBold text="Front-End Frameworks (WEB207)" />
 
                 <View style={styles.subContent}>
