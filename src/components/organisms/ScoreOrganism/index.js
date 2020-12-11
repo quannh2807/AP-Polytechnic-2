@@ -1,24 +1,24 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
 
-import TextOpacity from '_atoms/TextOpacity';
+import TextColor from '_atoms/TextColor';
 import TextBold from '_atoms/TextBold';
 import CutomIcon from '_atoms/CustomIcon';
-import { WHITE, PRIMARY, YELLOW, GREEN } from '_styles/colors';
+import { WHITE, YELLOW, PRIMARY } from '_styles/colors';
 
-const NewsOrganism = ({ data, onPress }) => {
+const ScoreOrganism = ({ data, onPress }) => {
     return (
         <TouchableOpacity style={styles.layoutContainer} onPress={onPress}>
             <View style={styles.content}>
                 <TextBold text={data.text} numberOfLines={2} />
                 <View style={styles.text}>
                     <Text>
-                        <TextOpacity text={' Người đăng: '} />{' '}
-                        <TextOpacity text={data.user} />
+                        Điểm trung bình:{' '}
+                        <TextColor content={data.score} color="#FF0000" />
                     </Text>
                     <Text>
-                        <TextOpacity text={' Thời gian: '} />{' '}
-                        <TextOpacity text={data.created_at} />
+                        Trạng thái:{' '}
+                        <TextColor content={data.status} color={YELLOW} />
                     </Text>
                 </View>
             </View>
@@ -58,8 +58,5 @@ const styles = StyleSheet.create({
     textYellow: {
         color: YELLOW,
     },
-    textGreen: {
-        color: GREEN,
-    },
 });
-export default NewsOrganism;
+export default ScoreOrganism;
