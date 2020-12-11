@@ -14,7 +14,7 @@ const ScheduleNavigator = () => {
             tabBarOptions={{
                 labelStyle: {
                     fontSize: 15,
-                    textTransform: 'capitalize',
+                    textTransform: 'none',
                 },
                 activeTintColor: Colors.PRIMARY,
                 inactiveTintColor: 'black',
