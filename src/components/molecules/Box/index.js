@@ -1,18 +1,25 @@
 import React from 'react';
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
-
+import { useNavigation } from '@react-navigation/native';
 import CustomIcon from '_atoms/CustomIcon';
 import { Colors } from '_styles';
 
-const Box = ({ nameIcon, children }) => (
-    <View style={styles.container}>
-        <View style={styles.contentSection}>{children}</View>
+const Box = ({ nameIcon, children, routeName }) => {
+    const navigation = useNavigation();
 
-        <TouchableOpacity style={styles.navigatorSection} onPress={() => {}}>
-            <CustomIcon name={nameIcon} color={Colors.GRAY_DARK} />
-        </TouchableOpacity>
-    </View>
-);
+    return (
+        <View style={styles.container}>
+            <View style={styles.contentSection}>{children}</View>
+
+            <TouchableOpacity
+                style={styles.navigatorSection}
+                onPress={() => navigation.navigate(routeName)}
+            >
+                <CustomIcon name={nameIcon} color={Colors.GRAY_DARK} />
+            </TouchableOpacity>
+        </View>
+    );
+};
 
 export default Box;
 
