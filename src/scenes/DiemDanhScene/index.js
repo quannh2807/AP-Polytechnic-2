@@ -353,7 +353,7 @@ const DiemDanhScene = () => {
             <FlatList
                 data={DATA}
                 renderItem={({ item }) => <DiemDanhOrganism subject={item} />}
-                keyExtractor={(item) => item.id}
+                keyExtractor={(item) => `${item.id}`}
                 style={styles.listSubject}
             />
         </View>

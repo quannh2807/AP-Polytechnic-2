@@ -130,9 +130,10 @@ const ScoreNavigator = () => {
                     backgroundColor: PRIMARY,
                 },
             }}
+            initialRouteName="KyHoc"
         >
             <Tab.Screen
-                name="Kỳ học"
+                name="KyHoc"
                 children={() => {
                     return (
                         <ScoreTemplate
@@ -142,9 +143,10 @@ const ScoreNavigator = () => {
                         />
                     );
                 }}
+                options={{ title: 'Kỳ học' }}
             />
             <Tab.Screen
-                name="Lịch Sử"
+                name="LichSu"
                 children={() => {
                     return (
                         <ScoreTemplate
@@ -154,9 +156,10 @@ const ScoreNavigator = () => {
                         />
                     );
                 }}
+                options={{ title: 'Lịch sử' }}
             />
             <Tab.Screen
-                name="Bảng điểm"
+                name="BangDiem"
                 children={() => {
                     return (
                         <ScoreTemplate
@@ -166,6 +169,7 @@ const ScoreNavigator = () => {
                         />
                     );
                 }}
+                options={{ title: 'Bảng điểm' }}
             />
         </Tab.Navigator>
     );

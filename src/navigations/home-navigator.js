@@ -4,9 +4,13 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { Colors } from '_styles';
+
 import NewsNavigator from '_navigations/news-navigator';
 import SchedleNavigator from '_navigations/schedule-navigator';
 import ScoreNavigator from '_navigations/score-navigator';
+
+import ThongTinThemScene from '_scenes/ThongTinThemScene';
+
 import CustomStatusBar from '_molecules/CustomStatusBar';
 import NotificationBar from '_molecules/NotificationBar';
 
@@ -85,11 +89,9 @@ const HomeNavigator = () => (
                 component={SchedleNavigator}
             />
             <HomeBottomTab.Screen name="Score" component={ScoreNavigator} />
-            <HomeBottomTab.Screen name="Option" component={OptionStack} />
+            <HomeBottomTab.Screen name="Option" component={ThongTinThemScene} />
         </HomeBottomTab.Navigator>
     </>
 );
 
 export default HomeNavigator;
-
-const OptionStack = () => <Text>News Screen</Text>;
