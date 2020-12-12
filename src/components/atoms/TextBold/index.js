@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 14,
         fontFamily: FONT_FAMILY_REGULAR,
-        lineHeight: 15,
-        textTransform: 'capitalize',
+        lineHeight: 16,
+        textTransform: 'uppercase',
     },
 });
 

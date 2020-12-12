@@ -4,7 +4,14 @@ import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
 import TextOpacity from '_atoms/TextOpacity';
 import TextBold from '_atoms/TextBold';
 import CutomIcon from '_atoms/CustomIcon';
-import { WHITE, PRIMARY, YELLOW, GREEN } from '_styles/colors';
+import {
+    WHITE,
+    PRIMARY,
+    YELLOW,
+    GREEN,
+    GRAY_DARK,
+    GRAY_LIGHT,
+} from '_styles/colors';
 
 const NewsOrganism = ({ data, onPress }) => {
     return (
@@ -23,7 +30,11 @@ const NewsOrganism = ({ data, onPress }) => {
                 </View>
             </View>
             <View style={styles.icon}>
-                <CutomIcon name="chevron-forward-outline" size={28} />
+                <CutomIcon
+                    name="chevron-forward-outline"
+                    size={28}
+                    color={GRAY_DARK}
+                />
             </View>
         </TouchableOpacity>
     );
@@ -38,6 +49,8 @@ const styles = StyleSheet.create({
         backgroundColor: WHITE,
         borderRadius: 8,
         marginVertical: 5,
+        borderWidth: 1,
+        borderColor: GRAY_LIGHT,
         paddingHorizontal: 10,
         marginHorizontal: 10,
     },

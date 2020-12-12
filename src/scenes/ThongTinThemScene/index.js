@@ -8,7 +8,6 @@ const ThongTinThemScene = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Thông tin thêm</Text>
-
             <View>
                 <OptionItem
                     iconName="heart-half-outline"

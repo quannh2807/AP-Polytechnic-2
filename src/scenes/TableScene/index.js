@@ -6,7 +6,7 @@ import GoBackHeader from '_molecules/GoBackHeader';
 
 const TableScene = ({ ...props }) => (
     <View style={{ flex: 1 }}>
-        <GoBackHeader route="Home" titleContent="Khởi sự doanh nghiệp" />
+        <GoBackHeader route="Score" titleContent="Khởi sự doanh nghiệp" />
         <TableOrganism {...props} />
     </View>
 );
