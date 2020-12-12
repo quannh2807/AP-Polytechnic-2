@@ -26,9 +26,7 @@ const LoginParents = () => {
                 <View style={styles.input}>
                     <InputMoleCule placeholder={placeHoldePassword} />
                 </View>
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('News')}
-                >
+                <TouchableOpacity onPress={() => navigation.navigate('App')}>
                     <View style={styles.button}>
                         <Button color={Colors.PRIMARY} />
                     </View>
@@ -42,8 +40,8 @@ const LoginParents = () => {
                 </Text>
                 <Text style={styles.text}>
                     - Để lấy mật khẩu truy cập phụ huynh soạn tin nhắn theo cú
-                    pháp <TextBold text="POLY MK" /> gửi về đầu số{' '}
-                    <TextBold text="8100" />.
+                    pháp <Text style={styles.textBold}>POLY MK </Text>gửi về đầu
+                    số <Text style={styles.textBold}>8100</Text>
                 </Text>
             </View>
         </View>
@@ -68,7 +66,12 @@ const styles = StyleSheet.create({
         paddingVertical: 20,
     },
     input: {
-        paddingVertical: 10
-    }
+        paddingVertical: 10,
+    },
+    textBold: {
+        fontSize: 14,
+        fontWeight: 'bold',
+        lineHeight: 15,
+    },
 });
 export default LoginParents;

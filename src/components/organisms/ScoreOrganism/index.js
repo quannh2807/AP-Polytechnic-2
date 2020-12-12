@@ -4,7 +4,7 @@ import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
 import TextColor from '_atoms/TextColor';
 import TextBold from '_atoms/TextBold';
 import CutomIcon from '_atoms/CustomIcon';
-import { WHITE, YELLOW, PRIMARY } from '_styles/colors';
+import { WHITE, YELLOW, PRIMARY, GRAY_DARK } from '_styles/colors';
 
 const ScoreOrganism = ({ data, onPress }) => {
     return (
@@ -23,7 +23,11 @@ const ScoreOrganism = ({ data, onPress }) => {
                 </View>
             </View>
             <View style={styles.icon}>
-                <CutomIcon name="chevron-forward-outline" size={28} />
+                <CutomIcon
+                    name="chevron-forward-outline"
+                    size={28}
+                    color={GRAY_DARK}
+                />
             </View>
         </TouchableOpacity>
     );
