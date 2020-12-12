@@ -78,24 +78,28 @@ const NewsNavigator = () => {
                     backgroundColor: PRIMARY,
                 },
             }}
+            initialRouteName="HocTap"
         >
             <Tab.Screen
-                name="Học tập"
+                name="HocTap"
                 children={() => {
                     return <NewsTemplate data={data} />;
                 }}
+                options={{ title: 'Học tập' }}
             />
             <Tab.Screen
-                name="Hoạt động"
+                name="HoatDong"
                 children={() => {
                     return <NewsTemplate data={data} />;
                 }}
+                options={{ title: 'Hoạt động' }}
             />
             <Tab.Screen
-                name="Chi phí"
+                name="ChiPhi"
                 children={() => {
                     return <NewsTemplate data={data} />;
                 }}
+                options={{ title: 'Chi phí' }}
             />
         </Tab.Navigator>
     );
