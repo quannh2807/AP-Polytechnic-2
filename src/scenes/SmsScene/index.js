@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, FlatList } from 'react-native';
+import { StyleSheet, FlatList } from 'react-native';
 
 import GoBackHeader from '_molecules/GoBackHeader';
 import SmsOrganisms from '_organisms/SmsOrganisms';
