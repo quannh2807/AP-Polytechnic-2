@@ -8,19 +8,12 @@ const ThongTinThemScene = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Thông tin thêm</Text>
-
             <View>
                 <OptionItem
                     iconName="heart-half-outline"
                     contentTitle="Khen thưởng & Kỷ luật"
                     contentSubTitle="Thông tin khen thưởng"
-                    routeName="Awards"
-                />
-                <OptionItem
-                    iconName="planet-outline"
-                    contentTitle="Dịch vụ trực tuyến"
-                    contentSubTitle="Sử dụng các dịch vụ trực tuyến"
-                    routeName="OnlineServices"
+                    routeName="KhenThuongKyLuat"
                 />
                 <OptionItem
                     iconName="call-outline"

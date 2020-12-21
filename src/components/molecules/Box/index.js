@@ -11,12 +11,14 @@ const Box = ({ nameIcon, children, routeName }) => {
         <View style={styles.container}>
             <View style={styles.contentSection}>{children}</View>
 
-            <TouchableOpacity
-                style={styles.navigatorSection}
-                onPress={() => navigation.navigate(routeName)}
-            >
-                <CustomIcon name={nameIcon} color={Colors.GRAY_DARK} />
-            </TouchableOpacity>
+            {nameIcon.length > 0 && (
+                <TouchableOpacity
+                    style={styles.navigatorSection}
+                    onPress={() => navigation.navigate(routeName)}
+                >
+                    <CustomIcon name={nameIcon} color={Colors.GRAY_DARK} />
+                </TouchableOpacity>
+            )}
         </View>
     );
 };

@@ -7,13 +7,11 @@ import ScoreTemplate from '_templates/ScoreTemplate';
 const Tab = createMaterialTopTabNavigator();
 
 const ScoreNavigator = () => {
-    const [score, setScore] = useState(true);
-
     const tableHead = ['Tên đầu điểm', 'Trọng số', 'Điểm'];
     const data = [
         {
             id: '1',
-            text: 'Khởi sự doanh nghiệp (SYB305)-PT1511WEB',
+            text: 'Khởi sự doanh nghiệp (SYB305) - PT1511 WEB',
             score: '9.0',
             status: 'passed',
             document: '10',
@@ -39,7 +37,7 @@ const ScoreNavigator = () => {
         },
         {
             id: '2',
-            text: 'Khởi sự doanh nghiệp (SYB305)-PT1511WEB',
+            text: 'Khởi sự doanh nghiệp (SYB305) - PT1511 WEB',
             score: '9.0',
             status: 'passed',
             document: '10',
@@ -65,7 +63,7 @@ const ScoreNavigator = () => {
         },
         {
             id: '3',
-            text: 'Khởi sự doanh nghiệp (SYB305)-PT1511WEB',
+            text: 'Khởi sự doanh nghiệp (SYB305) - PT1511 WEB',
             score: '9.0',
             status: 'passed',
             document: '10',
@@ -91,7 +89,7 @@ const ScoreNavigator = () => {
         },
         {
             id: '4',
-            text: 'Khởi sự doanh nghiệp (SYB305)-PT1511WEB',
+            text: 'Khởi sự doanh nghiệp (SYB305) - PT1511 WEB',
             score: '9.0',
             status: 'passed',
             document: '10',
@@ -135,39 +133,21 @@ const ScoreNavigator = () => {
             <Tab.Screen
                 name="KyHoc"
                 children={() => {
-                    return (
-                        <ScoreTemplate
-                            score={score}
-                            data={data}
-                            tableHead={tableHead}
-                        />
-                    );
+                    return <ScoreTemplate data={data} tableHead={tableHead} />;
                 }}
                 options={{ title: 'Kỳ học' }}
             />
             <Tab.Screen
                 name="LichSu"
                 children={() => {
-                    return (
-                        <ScoreTemplate
-                            score={score}
-                            data={data}
-                            tableHead={tableHead}
-                        />
-                    );
+                    return <ScoreTemplate data={data} tableHead={tableHead} />;
                 }}
                 options={{ title: 'Lịch sử' }}
             />
             <Tab.Screen
                 name="BangDiem"
                 children={() => {
-                    return (
-                        <ScoreTemplate
-                            score={score}
-                            data={data}
-                            tableHead={tableHead}
-                        />
-                    );
+                    return <ScoreTemplate data={data} tableHead={tableHead} />;
                 }}
                 options={{ title: 'Bảng điểm' }}
             />
