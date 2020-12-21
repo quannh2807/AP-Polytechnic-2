@@ -8,7 +8,6 @@ import DetailNewsScene from '_scenes/DetailNewsScene';
 import ChiTietDiemDanhScene from '_scenes/ChiTietDiemDanhScene';
 import TableScene from '_scenes/TableScene';
 import SmsScene from '_scenes/SmsScene';
-import DichVuTrucTuyenScene from '_scenes/DichVuTrucTuyenScene';
 import KhenThuongKyLuatScene from '_scenes/KhenThuongKyLuatScene';
 
 const RootStack = createStackNavigator();
@@ -24,10 +23,7 @@ const RootNavigator = () => (
                 component={ChiTietDiemDanhScene}
             />
             <RootStack.Screen name="SMS" component={SmsScene} />
-            <RootStack.Screen
-                name="DichVuTrucTuyen"
-                component={DichVuTrucTuyenScene}
-            />
+
             <RootStack.Screen
                 name="KhenThuongKyLuat"
                 component={KhenThuongKyLuatScene}

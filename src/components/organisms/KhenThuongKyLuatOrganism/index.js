@@ -10,10 +10,18 @@ const KhenThuongKyLuatOrganism = ({ data }) => {
                 <Text style={styles.hocKy}>{data.hocKy}</Text>
 
                 <View style={styles.mainContent}>
-                    <Text>Ngày tháng: {data.date}</Text>
-                    <Text>Nội dung: {data.content}</Text>
-                    <Text>Người ký: {data.nguoiKy}</Text>
-                    <Text>Số quyết định: {data.soQuyetDinh}</Text>
+                    <View style={styles.title}>
+                        <Text>Ngày tháng: {data.date}</Text>
+                    </View>
+                    <View style={styles.title}>
+                        <Text>Nội dung: {data.content}</Text>
+                    </View>
+                    <View style={styles.title}>
+                        <Text>Người ký: {data.nguoiKy}</Text>
+                    </View>
+                    <View style={styles.title}>
+                        <Text>Số quyết định: {data.soQuyetDinh}</Text>
+                    </View>
                 </View>
             </View>
         </View>
@@ -49,5 +57,8 @@ const styles = StyleSheet.create({
     mainContent: {
         flex: 3,
         paddingLeft: 10,
+    },
+    title: {
+        padding: 3,
     },
 });

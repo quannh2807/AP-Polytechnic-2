@@ -32,7 +32,7 @@ const SmsScene = () => {
             ListHeaderComponent={() => (
                 <GoBackHeader
                     titleContent="Danh sách số điện thoại nhận SMS"
-                    route="Home"
+                    route="Option"
                 />
             )}
         />

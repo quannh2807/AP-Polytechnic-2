@@ -4,7 +4,7 @@ import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
 import TextColor from '_atoms/TextColor';
 import TextBold from '_atoms/TextBold';
 import CutomIcon from '_atoms/CustomIcon';
-import { WHITE, YELLOW, PRIMARY, GRAY_DARK } from '_styles/colors';
+import { WHITE, YELLOW, PRIMARY, GRAY_DARK, GRAY_LIGHT } from '_styles/colors';
 
 const ScoreOrganism = ({ data, onPress }) => {
     return (
@@ -42,6 +42,8 @@ const styles = StyleSheet.create({
         backgroundColor: WHITE,
         borderRadius: 8,
         marginVertical: 5,
+        borderWidth: 1,
+        borderColor: GRAY_LIGHT,
         paddingHorizontal: 10,
         marginHorizontal: 10,
     },

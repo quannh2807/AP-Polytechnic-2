@@ -5,24 +5,24 @@ import TextCommon from '_atoms/TextCommon';
 import TextColor from '_atoms/TextColor';
 import { BG_LIGHT, WHITE } from '_styles/colors';
 
-const SmsOrganisms = ({ data }) => {
+const AwardOrganism = ({ data }) => {
     return (
         <View style={styles.container}>
             <View style={styles.box}>
-                <TextColor color={'#008000'} content={data.status} />
+                <TextColor color={'#008000'} content={data.semester} />
                 <View>
                     <View style={styles.content}>
-                        <TextCommon text={data.type} />
-                    </View>
-                    <View style={styles.content}>
-                        <TextCommon text={`Số điện thoại: ${data.number} `} />
+                        <TextCommon text={`Ngày tháng: ${data.date} `} />
                     </View>
 
                     <View style={styles.content}>
-                        <TextCommon text={`Chủ tài khoản: ${data.name} `} />
+                        <TextCommon text={`Nội dung: ${data.content} `} />
                     </View>
                     <View style={styles.content}>
-                        <TextCommon text={`Ngày tạo: ${data.date_created}`} />
+                        <TextCommon text={`Người ký: ${data.principal}`} />
+                    </View>
+                    <View style={styles.content}>
+                        <TextCommon text={`Quyết định: ${data.dicide}`} />
                     </View>
                 </View>
             </View>
@@ -51,4 +51,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default SmsOrganisms;
+export default AwardOrganism;
