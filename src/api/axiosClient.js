@@ -1,8 +1,9 @@
 import axios from 'axios';
 import queryString from 'query-string';
+import { API_URL } from '_constants';
 
 const axiosClient = axios.create({
-    baseURL: process.env.LOCAL_API,
+    baseURL: API_URL,
     headers: {
         'content-type': 'application/json',
     },

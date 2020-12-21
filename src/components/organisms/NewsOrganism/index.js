@@ -17,11 +17,11 @@ const NewsOrganism = ({ data, onPress }) => {
     return (
         <TouchableOpacity style={styles.layoutContainer} onPress={onPress}>
             <View style={styles.content}>
-                <TextBold text={data.text} numberOfLines={2} />
+                <TextBold text={data.title} numberOfLines={2} />
                 <View style={styles.text}>
                     <Text>
                         <TextOpacity text={' Người đăng: '} />{' '}
-                        <TextOpacity text={data.user} />
+                        <TextOpacity text={data.created_by} />
                     </Text>
                     <Text>
                         <TextOpacity text={' Thời gian: '} />{' '}
